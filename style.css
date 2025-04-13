@@ -115,7 +115,7 @@ li{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 400px; /* or set a fixed height matching your image */
+
 }
 
 .carousel img {

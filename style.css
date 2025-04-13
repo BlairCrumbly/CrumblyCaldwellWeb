@@ -1,0 +1,293 @@
+body{
+    background-color: #0f151c;
+    font-family: "Poppins", serif;
+    margin: 0; 
+    padding: 0;
+}
+
+
+
+
+li{
+    list-style: none;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1C2735; /*#2E4057; #048BA8 blue crystal*/
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.navbar h1 {
+    color: white; 
+    margin-top: 10px;
+    margin-left: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.navbar a {
+    color: white; 
+    text-decoration: none; 
+    margin-left: 10px; 
+    padding: 10px; 
+    font-family: poppins;
+    font-weight: 200;
+    
+    
+}
+
+
+.navbar a:hover {
+    color: #F18F01;
+    border-radius: 12px; 
+}
+
+#home {
+    font-family: "Artifika", serif; /* Optional: Change font to match your theme */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fbfbfb;
+    font-size: 30px;
+    margin: 0 auto; /* Auto margin horizontally */
+    padding: 20px; /* Space inside the div */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    width: 100%; /* Control the width of the div */
+    background-image: url('body-images/3B96AA39-CD48-4717-A367-29882E7E5A36.jpg'); /* Replace with the actual image path */
+    background-size: cover; /* Make the image cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+#home h2{
+    font-family: "Benne", serif; 
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff0e6;
+    font-size: 40px;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.604), /* Inner glow */
+                 0 0 15px rgba(0, 0, 0, 0.389), /* Outer glow */
+                 0 0 14px rgba(0, 0, 0, 0.4); /* Softer glow */
+
+}
+
+
+
+#photoGallery, #events, #familyHistory, #board {
+    padding: 50px;
+    color: white;
+    
+}
+
+
+#photoGallery h2 {
+    text-align: center;
+    margin: 0;
+    color: #2a7ae2; /* Optional: Change color to match your theme */
+}
+
+
+
+
+
+
+#photoGallery h2, p{
+    padding: 10px;
+    color: white;
+}
+
+
+.carousel {
+    width: 50%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.carousel-controls .prev {
+    position: absolute;
+    left: 10px; /* Position it to the left */
+  }
+  
+  .carousel-controls .next {
+    position: absolute;
+    right: 10px; /* Position it to the right */
+  }
+
+
+.carousel-controls button {
+    background-color: #f191015e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-controls button:hover {
+    background-color: #c1770771;
+}
+
+#events {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #00000048;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event h3 {
+    margin: 0;
+    color: #ac6604 /*rabbit*/
+}
+
+.event p {
+    margin: 5px 0;
+}
+
+.countdown {
+    font-size: 18px;
+    color: #d9534f;
+}
+
+.FamilyHistory {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #F18F01;
+}
+
+.timeline li h4 {
+    margin: 0;
+}
+
+#board {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #00000041;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(4, auto); /* Four rows */
+    gap: 20px; /* Space between items */
+}
+
+.board-member {
+    display: flex; /* Flexbox for each board member */
+    align-items: center; /* Vertically align image and text */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.board-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.board-member div {
+    display: flex;
+    flex-direction: column;
+}
+
+.board-member h4 {
+    margin: 0;
+    color: #ac6604; /* Bunny */
+}
+
+.board-member p {
+    margin: 5px 0 0 0;
+}
+
+/* Position the first 4 items in the second column */
+.board-member:nth-child(1) { grid-column: 2; grid-row: 1;}
+.board-member:nth-child(2) { grid-column: 2; grid-row: 2;}
+.board-member:nth-child(3) { grid-column: 2; grid-row: 3;  }
+.board-member:nth-child(4) { grid-column: 2; grid-row: 4;  }
+
+/* Position the remaining items in the first column */
+.board-member:nth-child(5) { grid-column: 1; grid-row: 1; }
+.board-member:nth-child(6) { grid-column: 1; grid-row: 2; }
+.board-member:nth-child(7) { grid-column: 1; grid-row: 3; }
+.board-member:nth-child(8) { grid-column: 1; grid-row: 4; }
+
+
+/* copyright */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2E4057; /* Adjust to match your color scheme */
+    color: #ffffff; /* Text color */
+    font-size: 14px;
+    margin-top: 10px;
+    border-top: 1px solid #293039; /* Subtle border for separation */
+}

@@ -102,10 +102,6 @@ li{
 }
 
 
-
-
-
-
 #photoGallery h2, p{
     padding: 10px;
     color: white;
@@ -119,18 +115,22 @@ li{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px; /* or set a fixed height matching your image */
 }
 
 .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: none;
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
 }
 
 .carousel img.active {
-    display: block;
     opacity: 1;
+    z-index: 1;
 }
 
 .carousel-controls {
@@ -140,6 +140,7 @@ li{
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    z-index: 2;
 }
 .carousel-controls .prev {
     position: absolute;
@@ -229,14 +230,14 @@ li{
 
 .board {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    grid-template-rows: repeat(4, auto); /* Four rows */
-    gap: 20px; /* Space between items */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px; 
 }
 
 .board-member {
-    display: flex; /* Flexbox for each board member */
-    align-items: center; /* Vertically align image and text */
+    display: flex;
+    align-items: center;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -291,3 +292,103 @@ footer {
     margin-top: 10px;
     border-top: 1px solid #293039; /* Subtle border for separation */
 }
+
+/* Responsive Utilities */
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* Navbar responsiveness */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
+  
+    .navbar a {
+      margin: 5px 0;
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .navbar h1 {
+      margin-left: 0;
+      font-size: 18px;
+    }
+  }
+  
+  /* Home section adjustments */
+  @media (max-width: 768px) {
+    #home {
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    #home h2 {
+      font-size: 26px;
+    }
+  }
+  
+  /* Carousel responsive */
+  @media (max-width: 768px) {
+    .carousel {
+      width: 90%;
+    }
+  
+    .carousel-controls button {
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Board section grid to single column on small screens */
+  @media (max-width: 768px) {
+    .board {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .board-member {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .board-member img {
+      margin: 0 0 10px 0;
+    }
+  
+    .board-member div {
+      align-items: center;
+    }
+  
+    .board-member:nth-child(n) {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
+  
+  /* Timeline and Event Section Responsiveness */
+  @media (max-width: 768px) {
+    #events,
+    .FamilyHistory,
+    #board {
+      padding: 20px;
+      margin: 20px auto;
+    }
+  
+    .event h3 {
+      font-size: 16px;
+    }
+  
+    .countdown {
+      font-size: 16px;
+    }
+  
+    .timeline li {
+      padding-left: 15px;
+    }
+  }
+  
